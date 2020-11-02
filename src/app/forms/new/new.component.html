@@ -1,57 +1,65 @@
 <form>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="title">Recipe name</label>
-            <input type="text" class="form-control" id="title">
-        </div>
+  <div class="form-group row">
+    <label for="title" class="col-md-2 col-form-label">Recipe name</label>
+    <div class="col-md-10">
+      <input type="text" class="form-control" id="title">
+    </div>
+  </div>
 
-        <div class="form-group col-md-6">
-            <div class="custom-file">
-                <label for="mainPicture" class="custom-file-label">Picture of the recipe</label>
-                <input type="file" class="form-control-file custom-file-input" id="mainPicture">
-            </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <div class="custom-file">
+        <label for="mainPicture" class="custom-file-label">Picture of the recipe</label>
+        <input type="file" class="form-control-file custom-file-input" id="mainPicture">
+      </div>
+    </div>
+  </div>
 
-        </div>
+  <hr class="clearfix">
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="numberPeople">How many people</label>
+      <input type="number" class="form-control" id="numberPeople" min="1" max="30" value="1">
     </div>
 
-    <hr class="clearfix">
-
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="numberPeople">How many people</label>
-            <input type="number" class="form-control" id="numberPeople" min="1" max="30" value="1">
-        </div>
-
-        <div class="form-group col-md-6">
-            <label for="timeCooking">Time cooking in minutes</label>
-            <input type="number" class="form-control" id="timeCooking" min="1" max="7200" value="5">
-        </div>
-
+    <div class="form-group col-md-4">
+      <label for="timeCooking">Time cooking in minutes</label>
+      <input type="number" class="form-control" id="timeCooking" min="1" max="7200" value="5">
     </div>
 
-    <div class="form-group">
-        <label for="difficulty">Difficulty of the recipe <i class="fas fa-info-circle" title="Time and money expended doing the recipe"></i></label>
-        <select class="form-control custom-select" id="difficulty">
-            <option value="1">Very Easy</option>
-            <option value="2">Easy</option>
-            <option value="3" selected>Normal</option>
-            <option value="4">Hard</option>
-            <option value="5">Very hard</option>
-        </select>
+    <div class="form-group col-md-4">
+      <label for="difficulty">Difficulty of the recipe <i class="fas fa-info-circle"
+                                                          title="Time and money expended doing the recipe"></i></label>
+      <select class="form-control custom-select" id="difficulty">
+        <option value="1">Very Easy</option>
+        <option value="2">Easy</option>
+        <option value="3" selected>Normal</option>
+        <option value="4">Hard</option>
+        <option value="5">Very hard</option>
+      </select>
     </div>
+  </div>
 
-    <div class="form-group">
-        <label for="categories">Categories for the recipe <i class="fas fa-info-circle" title="Each category separated by comma"></i></label>
-        <div id="categorySelector"></div>
-        <input type="text" class="form-control" id="categories">
+  <div class="form-group row">
+    <label for="categories" class="col-md-2 col-form-label">Categories <i class="fas fa-info-circle"
+                                                                          title="Each category separated by comma"></i></label>
+    <div class="col-md-10">
+      <div id="categorySelector"></div>
+      <input type="text" class="form-control" id="categories">
     </div>
+  </div>
 
-    <hr class="clearfix">
+  <hr class="clearfix">
 
-    <div class="form-group">
-        <label for="stepsCooking">Recipe</label>
-        <textarea class="form-control" id="stepsCooking" rows="10"></textarea>
-    </div>
+  <div class="form-row">
+    <label for="stepsCooking" class="col-form-label">Recipe</label>
+    <textarea class="form-control" id="stepsCooking" rows="10"></textarea>
+  </div>
 
+  <hr class="clearfix">
+
+  <div class="text-right">
     <button type="submit" class="btn btn-primary">Save recipe</button>
+  </div>
 </form>
