@@ -10,6 +10,10 @@ import { NewComponent } from './forms/new/new.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ListComponent } from './forms/list/list.component';
 import { LoginComponent } from './forms/login/login.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { LoggerModule } from "ngx-logger";
+import { environment } from "../environments/environment";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +28,14 @@ import { LoginComponent } from './forms/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    LoggerModule.forRoot({
+      level: environment.logLevel,
+      disableConsoleLogging: environment.production,
+      timestampFormat: "yyyy-MM-ddTHH:mm:ss:SSSZZZ"
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
